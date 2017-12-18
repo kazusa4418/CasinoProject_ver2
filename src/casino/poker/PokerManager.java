@@ -3,7 +3,7 @@ package casino.poker;
 import casino.main.CharEntity;
 import casino.main.ComPlayer;
 import casino.main.Player;
-import util.file.manager.ConsoleManager;
+import util.manager.ConsoleManager;
 import util.playingcard.*;
 
 import java.util.Scanner;
@@ -27,7 +27,6 @@ public class PokerManager {
 
         pl.getHand().clear();
         com.getHand().clear();
-        stock.initialize();
     }
 
     private void distribute() {

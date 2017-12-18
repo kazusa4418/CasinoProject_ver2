@@ -16,6 +16,10 @@ public class Player implements CharEntity {
     private Player() {
     }
 
+    public PlayData getPlayData() {
+        return data;
+    }
+
     public void setPlayData(PlayData data) {
         this.data = data;
     }

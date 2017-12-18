@@ -2,9 +2,8 @@ package casino.main;
 
 import java.io.Serializable;
 import java.time.Duration;
-import util.file.Data;
 
-public class PlayData implements Data, Serializable {
+public class PlayData implements Serializable {
     private String name;
     private int chips;
     private Duration time;

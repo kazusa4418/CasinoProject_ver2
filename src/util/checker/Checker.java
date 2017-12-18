@@ -38,8 +38,6 @@ public class Checker {
     }
 
     public static boolean isNumber(String text) {
-        if (text.matches("[0-9]+"))
-            return true;
-        return false;
+        return text.matches("[0-9]+");
     }
 }
