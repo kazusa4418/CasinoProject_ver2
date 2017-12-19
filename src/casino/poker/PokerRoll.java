@@ -85,7 +85,7 @@ class PokerRoll {
     private void overlapCardCheck() {
         for (int i = 0; i < overlap.length; i++)
             for (CardNumber num : numbers) {
-                if (num.Strength() == (i + 1))
+                if (num.strength() == (i + 1))
                     overlap[i]++;
             }
     }
@@ -103,21 +103,40 @@ class PokerRoll {
         return true;
     }
 
+//    private boolean judgeStraight() {
+//        int dif = 1;
+//        int usedJoker = 0;
+//        for (int i = 1; i < HAND_SIZE - JOKER_NUMBER; i++) {
+//            if (numbers[i].strength() - numbers[0].strength() != dif) {
+//                if (usedJoker < JOKER_NUMBER) {
+//                    usedJoker++;
+//                    i--;
+//                } else return false;
+//            }
+//            dif++;
+//        }
+//        setScore(5);
+//        return true;
+//    }
     private boolean judgeStraight() {
-        int dif = 1;
-        int usedJoker = 0;
-        for (int i = 1; i < HAND_SIZE - JOKER_NUMBER; i++) {
-            if (numbers[i].Strength() - numbers[0].Strength() != dif) {
-                if (usedJoker < JOKER_NUMBER) {
-                    usedJoker++;
-                    i--;
-                } else return false;
-            }
-            dif++;
+        int maxIndex = HAND_SIZE - JOKER_NUMBER - 1;
+        if (numbers[maxIndex].strength() - numbers[0].strength() < 5
+                && distinctCheck()) {
+            setScore(5);
+            return true;
         }
-        setScore(5);
+        return false;
+    }
+
+    private boolean distinctCheck() {
+        for (int i = 0; i < HAND_SIZE - JOKER_NUMBER; i++ )
+            for (int j = i + 1; j < HAND_SIZE - JOKER_NUMBER; j++ )
+                if (numbers[i].strength() == numbers[j].strength())
+                    return false;
         return true;
     }
+
+
 
     private boolean judgeStraightFlush() {
         if (judgeStraight() && judgeFlush()) {
@@ -131,7 +150,7 @@ class PokerRoll {
     private void judgeRoyalStraightFlush() {
         if (judgeStraightFlush()) {
             for (int i = 0; i < HAND_SIZE; i++)
-                if (numbers[0].Strength() == 10)
+                if (numbers[0].strength() == 10)
                     setScore(10);
         }
     }

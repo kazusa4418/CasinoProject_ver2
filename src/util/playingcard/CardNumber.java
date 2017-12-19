@@ -30,7 +30,7 @@ public enum CardNumber {
         return this.number;
     }
 
-    public int Strength() {
+    public int strength() {
         return strength;
     }
 }
