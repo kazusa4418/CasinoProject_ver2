@@ -41,20 +41,38 @@ public class Card {
         return this.suit;
     }
 
-    public boolean equals(Card card) {
-        return card.number == this.number && card.suit == this.suit;
+    public int strength() {
+        return this.getNum().strength() * 10
+                + this.getSuit().strength();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Card) {
+            Card card = (Card) obj;
+            return card.number
+                    == this.number && card.suit == this.suit;
+        } else return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 13;
+        result = 31 * result * number.strength();
+        result = 31 * result * suit.strength();
+        return result;
     }
 
     @Override
     public String toString() {
-        if (this.suit == CardSuit.JOKER) {
-            return "(" + this.suit + ")";
-        }
-        return "(" + this.number + "," + this.suit + ")";
+        if (this.strength() == 0)
+            return "(JOKER)";
+        return String.format("(%s%s)", this.number, this.suit);
     }
 
     public String toString(boolean flag) {
         //trueを受け取るとカードの数字を、falseを受け取るとマークを返す
-        return flag ? "(" + this.number + ")" : "(" + this.suit + ")";
+        return flag ? this.number.toString()
+                    : this.suit.toString();
     }
 }

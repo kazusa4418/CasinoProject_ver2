@@ -41,7 +41,7 @@ class SaveFileManager {
             e.printStackTrace();
         } finally {
             try { fm.close(); }
-            catch(IOException e) {}
+            catch(IOException ignored) {}
         }
     }
 

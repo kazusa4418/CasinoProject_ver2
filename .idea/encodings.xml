@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$USER_HOME$/Desktop/LunchDecideTool/src/LunchDecideTool.java" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/Title.java" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/casino/poker/PokerManager.java" charset="Shift_JIS" />
+    <file url="file://$PROJECT_DIR$/src/casino/poker/PokerRoll.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/checker/Checker.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/menu/Menu.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/CardNumber.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/CardSorter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/CardStock.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/CardSuit.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/Hand.java" charset="UTF-8" />
+  </component>
+</project>

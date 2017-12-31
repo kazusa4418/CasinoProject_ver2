@@ -36,7 +36,7 @@ public class Menu {
             String input = br.readLine();
             if (Checker.numberCheck(input, items.size() + 1))
                 return Integer.parseInt(input);
-            System.out.println("“ü—Í‚ªŠÔˆá‚Á‚Ä‚¢‚Ü‚·B");
+            System.out.println("å…¥åŠ›ãŒé–“é•ã£ã¦ã„ã¾ã™ã€‚");
         }
     }
 

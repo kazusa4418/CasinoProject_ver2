@@ -10,7 +10,6 @@ class PokerRoll {
     private CardNumber[] numbers = new CardNumber[HAND_SIZE];
     private int[] overlap = new int[CardNumber.values().length - 1];
 
-
     private int score = 0;
     private final int JOKER_NUMBER;
 
@@ -40,29 +39,29 @@ class PokerRoll {
 
     @Override
     public String toString() {
-        switch(score) {
+        switch (score) {
             case 1:
-                return "ƒnƒCƒJ[ƒh";
+                return "ãƒã‚¤ã‚«ãƒ¼ãƒ‰";
             case 2:
-                return "ƒƒ“ƒyƒA";
+                return "ãƒ¯ãƒ³ãƒšã‚¢";
             case 3:
-                return "ƒc[ƒyƒA";
+                return "ãƒ„ãƒ¼ãƒšã‚¢";
             case 4:
-                return "ƒXƒŠ[ƒJ[ƒh";
+                return "ã‚¹ãƒªãƒ¼ã‚«ãƒ¼ãƒ‰";
             case 5:
-                return "ƒXƒgƒŒ[ƒg";
+                return "ã‚¹ãƒˆãƒ¬ãƒ¼ãƒˆ";
             case 6:
-                return "ƒtƒ‰ƒbƒVƒ…";
+                return "ãƒ•ãƒ©ãƒƒã‚·ãƒ¥";
             case 7:
-                return "ƒtƒ‹ƒnƒEƒX";
+                return "ãƒ•ãƒ«ãƒã‚¦ã‚¹";
             case 8:
-                return "ƒtƒH[ƒJ[ƒh";
+                return "ãƒ•ã‚©ãƒ¼ã‚«ãƒ¼ãƒ‰";
             case 9:
-                return "ƒXƒgƒŒ[ƒgƒtƒ‰ƒbƒVƒ…";
+                return "ã‚¹ãƒˆãƒ¬ãƒ¼ãƒˆãƒ•ãƒ©ãƒƒã‚·ãƒ¥";
             case 10:
-                return "ƒƒCƒ„ƒ‹ƒXƒgƒŒ[ƒgƒtƒ‰ƒbƒVƒ…";
+                return "ãƒ­ã‚¤ãƒ¤ãƒ«ã‚¹ãƒˆãƒ¬ãƒ¼ãƒˆãƒ•ãƒ©ãƒƒã‚·ãƒ¥";
             case 11:
-                return "ƒtƒ@ƒCƒuƒJ[ƒh";
+                return "ãƒ•ã‚¡ã‚¤ãƒ–ã‚«ãƒ¼ãƒ‰";
             default:
                 throw new RollNotFoundException();
         }
@@ -81,7 +80,7 @@ class PokerRoll {
             numbers[i] = hand.get(i).getNum();
     }
 
-    //TODO: ‚à‚Á‚Æ‚¢‚¢À‘•‚ª‚ ‚è‚»‚¤‚È‚Ì‚Å‘‚«’¼‚·
+    //TODO: ã‚‚ã£ã¨ã„ã„å®Ÿè£…ãŒã‚ã‚Šãã†ãªã®ã§æ›¸ãç›´ã™
     private void overlapCardCheck() {
         for (int i = 0; i < overlap.length; i++)
             for (CardNumber num : numbers) {
@@ -103,7 +102,7 @@ class PokerRoll {
         return true;
     }
 
-//    private boolean judgeStraight() {
+    //    private boolean judgeStraight() {
 //        int dif = 1;
 //        int usedJoker = 0;
 //        for (int i = 1; i < HAND_SIZE - JOKER_NUMBER; i++) {
@@ -129,13 +128,12 @@ class PokerRoll {
     }
 
     private boolean distinctCheck() {
-        for (int i = 0; i < HAND_SIZE - JOKER_NUMBER; i++ )
-            for (int j = i + 1; j < HAND_SIZE - JOKER_NUMBER; j++ )
+        for (int i = 0; i < HAND_SIZE - JOKER_NUMBER; i++)
+            for (int j = i + 1; j < HAND_SIZE - JOKER_NUMBER; j++)
                 if (numbers[i].strength() == numbers[j].strength())
                     return false;
         return true;
     }
-
 
 
     private boolean judgeStraightFlush() {
@@ -146,7 +144,7 @@ class PokerRoll {
         return false;
     }
 
-    //TODO: ƒAƒ‹ƒSƒŠƒYƒ€‚ªv‚¢‚Â‚«Ÿ‘æ‘‚«’¼‚¹
+    //TODO: ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ãŒæ€ã„ã¤ãæ¬¡ç¬¬æ›¸ãç›´ã›
     private void judgeRoyalStraightFlush() {
         if (judgeStraightFlush()) {
             for (int i = 0; i < HAND_SIZE; i++)
