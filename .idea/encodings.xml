@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/casino/main/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/SaveFileManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/Title.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/poker/PokerManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/poker/PokerRoll.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/poker/TestClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/checker/Checker.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/manager/NotRecordException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/manager/TestClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/menu/Menu.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/Card.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/CardSorter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/CardSorterOnPoker.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/CardStock.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/playingcard/CardSuit.java" charset="UTF-8" />
+    <file url="PROJECT" charset="windows-31j" />
+  </component>
+</project>
