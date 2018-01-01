@@ -1,18 +1,16 @@
 package util.playingcard;
 
 public enum CardSuit {
-    JOKER("JOKER", 5),        //ordinal is 0
-    SPADE("スペード", 1),     //ordinal is 1
-    HEART("ハート", 2),       //ordinal is 2
-    DIAMOND("ダイヤ", 3),     //ordinal is 3
-    CLOVER("クローバー", 4);  //ordinal is 4
+    JOKER("JOKER"),        //ordinal is 0
+    SPADE("笙"),            //ordinal is 1
+    HEART("笙･"),            //ordinal is 2
+    DIAMOND("笙ｦ"),          //ordinal is 3
+    CLOVER("笙｣");           //ordinal is 4
 
     private String suit;
-    private int strength;
 
-    CardSuit(String suit, int strength) {
+    CardSuit(String suit) {
         this.suit = suit;
-        this.strength = strength;
     }
 
     @Override
@@ -20,7 +18,7 @@ public enum CardSuit {
         return this.suit;
     }
 
-    public int getStrength() {
-        return strength;
+    public int strength() {
+        return this.ordinal();
     }
 }

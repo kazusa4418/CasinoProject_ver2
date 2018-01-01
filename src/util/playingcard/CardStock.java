@@ -16,7 +16,7 @@ public class CardStock extends ArrayList<Card> {
     }
 
     private void createStock(int jokerNum) {
-        //52–‡•ª‚ÌƒJ[ƒh‚ÌŠeƒCƒ“ƒXƒ^ƒ“ƒX‚ğì¬‚µAƒŠƒXƒg‚ÉŠi”[‚·‚é
+        //52æšåˆ†ã®ã‚«ãƒ¼ãƒ‰ã®å„ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’ä½œæˆã—ã€ãƒªã‚¹ãƒˆã«æ ¼ç´ã™ã‚‹
         CardNumber[] numbers = CardNumber.values();
         CardSuit[] suits = CardSuit.values();
         for (int i = 1; i < numbers.length; i++ ) {

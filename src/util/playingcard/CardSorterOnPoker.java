@@ -19,35 +19,14 @@ public class CardSorterOnPoker implements Comparator<Card> {
      * @return 比較するインスタンスが大小によって0, 1, -1 のいずれかが返却されます。
      */
     public int compare(Card card1, Card card2) {
-        //同じカードであるなら0を返す
-        if (card1.equals(card2)) {
-            return 0;
-        }
-        //自身のインスタンスがJOKERならば1を返す
-        if (card1.getNum().ordinal() == 0) {
+        if (card1.getNum() == CardNumber.JOKER)
             return 1;
-        }
-        //比較対象のインスタンスがJOKERならば-1を返す
-        if (card2.getNum().ordinal() == 0) {
+        if (card2.getNum() == CardNumber.JOKER)
             return -1;
-        }
-        //自身のインスタンスがAならば1を返す
-        if (card1.getNum().ordinal() == 1) {
+        if (card1.getNum() == CardNumber.num1)
             return 1;
-        }
-        //比較対象のインスタンスがAならば-1を返す
-        if (card2.getNum().ordinal() == 1) {
+        if (card2.getNum() == CardNumber.num1)
             return -1;
-        }
-        //自身のインスタンスのほうが大きい数なら1を返す
-        if (card1.getNum().ordinal() > card2.getNum().ordinal()) {
-            return 1;
-        }
-        //比較対象のインスタンスのほうが大きい数なら-1を返す
-        if (card1.getNum().ordinal() < card2.getNum().ordinal()) {
-            return -1;
-        }
-        //カードの数字が同じなら、カードのマークで強さをはかる
-        return Integer.compare(card1.getSuit().ordinal(), card2.getSuit().ordinal());
+        return Integer.compare(card1.strength(), card2.strength());
     }
 }

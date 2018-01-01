@@ -1,12 +1,11 @@
 package util.checker;
 
-import java.text.Format;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Checker {
     public static boolean numberCheck(int number, int range) {
-        //number‚ª1~count‚Ü‚Å‚Ì®”‚©‚Ç‚¤‚©‚ğ”»•Ê‚µ‚Ü‚·
+        //numberãŒ1~countã¾ã§ã®æ•´æ•°ã‹ã©ã†ã‹ã‚’åˆ¤åˆ¥ã—ã¾ã™
         return numberCheck(number, 0, range);
     }
 

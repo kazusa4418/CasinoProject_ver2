@@ -14,9 +14,9 @@ public class Main implements Callback {
     private boolean flag = true;
 
     private Main() {
-        menu.addMenu(1, "ƒ|[ƒJ[‚ğƒvƒŒƒC‚·‚é", this);
-        menu.addMenu(2, "ƒuƒ‰ƒbƒNƒWƒƒƒbƒN‚ğƒvƒŒƒC‚·‚é", this);
-        menu.addMenu(3, "ƒ^ƒCƒgƒ‹‚É–ß‚é", this);
+        menu.addMenu(1, "ãƒãƒ¼ã‚«ãƒ¼ã‚’ãƒ—ãƒ¬ã‚¤ã™ã‚‹", this);
+        menu.addMenu(2, "ãƒ–ãƒ©ãƒƒã‚¯ã‚¸ãƒ£ãƒƒã‚¯ã‚’ãƒ—ãƒ¬ã‚¤ã™ã‚‹", this);
+        menu.addMenu(3, "ã‚¿ã‚¤ãƒˆãƒ«ã«æˆ»ã‚‹", this);
     }
 
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Main implements Callback {
         while(true) {
             title.menu();
             this.menu();
-            System.out.println("‚Ü‚½‚Ü‚½“Ç‚Ü‚ê‚Ä‚¢‚é‚æI");
+            System.out.println("ã¾ãŸã¾ãŸèª­ã¾ã‚Œã¦ã„ã‚‹ã‚ˆï¼");
         }
     }
 
@@ -69,11 +69,11 @@ public class Main implements Callback {
     private boolean askContinue() {
         Scanner sc = new Scanner(System.in);
         while (true) {
-            System.out.print("‚à‚¤ˆê“xƒvƒŒƒC‚µ‚Ü‚·‚©H(yes[y] or no[n])\n> ");
+            System.out.print("ã‚‚ã†ä¸€åº¦ãƒ—ãƒ¬ã‚¤ã—ã¾ã™ã‹ï¼Ÿ(yes[y] or no[n])\n> ");
             String input = sc.nextLine();
             if (Checker.stringCheck(input, "yes", "y", "no", "n"))
                 return yesOrNo(input);
-            System.out.println("“ü—Í‚ªŠÔˆá‚Á‚Ä‚¢‚Ü‚·B");
+            System.out.println("å…¥åŠ›ãŒé–“é•ã£ã¦ã„ã¾ã™ã€‚");
         }
     }
 
