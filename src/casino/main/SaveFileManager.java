@@ -14,16 +14,16 @@ class SaveFileManager {
     private Player pl = Player.getInstance();
 
     void createSaveData() {
-        System.out.println("V‹KƒZ[ƒuƒf[ƒ^‚ğì¬‚µ‚Ü‚·B");
-        System.out.print("ƒZ[ƒuƒf[ƒ^–¼‚ğŒˆ‚ß‚Ä‚­‚¾‚³‚¢(”¼Šp‰p”š)\n> ");
+        System.out.println("æ–°è¦ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã‚’ä½œæˆã—ã¾ã™ã€‚");
+        System.out.print("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿åã‚’æ±ºã‚ã¦ãã ã•ã„(åŠè§’è‹±æ•°å­—)\n> ");
         String name = input();
         File file = new File(name);
         try {
-            //TODO: Œx‚ÌÁ‚µ•û‚µ‚ç‚×‚ÄÁ‚·
+            //TODO: è­¦å‘Šã®æ¶ˆã—æ–¹ã—ã‚‰ã¹ã¦æ¶ˆã™
             if (file.createNewFile())
-                System.out.println("ƒZ[ƒuƒf[ƒ^‚ğì¬‚µ‚Ü‚µ‚½B");
+                System.out.println("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã‚’ä½œæˆã—ã¾ã—ãŸã€‚");
             else {
-                System.out.println("ƒZ[ƒuƒf[ƒ^‚Ìì¬‚É¸”s‚µ‚Ü‚µ‚½B");
+                System.out.println("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã®ä½œæˆã«å¤±æ•—ã—ã¾ã—ãŸã€‚");
                 System.exit(1);
             }
             writeSaveData(file);
@@ -52,7 +52,7 @@ class SaveFileManager {
             if (Checker.stringCheck(text, Pattern.compile("[a-zA-Z0-9]+"))
                     && distinctCheck(text))
                 return "saves\\" + text + ".dat";
-            System.out.print("ƒtƒH[ƒ}ƒbƒg‚ª³‚µ‚­‚È‚¢‚©AŠù‚É‘¶İ‚·‚éƒtƒ@ƒCƒ‹–¼‚Å‚·B\nÄ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n> ");
+            System.out.print("ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆãŒæ­£ã—ããªã„ã‹ã€æ—¢ã«å­˜åœ¨ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«åã§ã™ã€‚\nå†å…¥åŠ›ã—ã¦ãã ã•ã„\n> ");
         }
     }
 
@@ -104,16 +104,16 @@ class SaveFileManager {
             String input = sc.nextLine();
             if (Checker.numberCheck(input, saves.length + 1))
                 return Integer.parseInt(input);
-            System.out.println("“ü—Í‚ªŠÔˆá‚Á‚Ä‚¢‚Ü‚·B");
+            System.out.println("å…¥åŠ›ãŒé–“é•ã£ã¦ã„ã¾ã™ã€‚");
         }
     }
 
     void deleteSaveData() {
-        System.out.print("íœ‚·‚éƒZ[ƒuƒf[ƒ^‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢\n> ");
+        System.out.print("å‰Šé™¤ã™ã‚‹ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã‚’é¸æŠã—ã¦ãã ã•ã„\n> ");
         File file = readFile();
         System.out.println(file);
-        if (file != null && file.delete()) System.out.println("ƒZ[ƒuƒf[ƒ^‚ğíœ‚µ‚Ü‚µ‚½B");
-        else System.out.println("ƒZ[ƒuƒf[ƒ^‚Ìíœ‚É¸”s‚µ‚Ü‚µ‚½B");
+        if (file != null && file.delete()) System.out.println("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤ã—ã¾ã—ãŸã€‚");
+        else System.out.println("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã®å‰Šé™¤ã«å¤±æ•—ã—ã¾ã—ãŸã€‚");
     }
 }
 

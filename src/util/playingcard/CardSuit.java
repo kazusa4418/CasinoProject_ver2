@@ -21,4 +21,8 @@ public enum CardSuit {
     public int strength() {
         return this.ordinal();
     }
+
+    public boolean isJOKER() {
+        return this == JOKER;
+    }
 }

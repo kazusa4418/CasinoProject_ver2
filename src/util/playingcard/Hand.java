@@ -2,13 +2,13 @@ package util.playingcard;
 
 import java.util.ArrayList;
 
-public class Hand extends ArrayList<Card> {
+public class Hand extends ArrayList<PlayingCard> {
 
     public void show() {
         if (isEmpty())
             System.out.println("(Empty)");
         else {
-            for (Card card : this)
+            for (PlayingCard card : this)
                 System.out.print(card);
         }
         System.out.println();
@@ -24,11 +24,11 @@ public class Hand extends ArrayList<Card> {
                         System.out.println((i + 1) + ": " + this.get(i));
                     break;
                 case "NUM_ONLY":
-                    for (Card card : this)
+                    for (PlayingCard card : this)
                         System.out.println(card.toString(true));
                     break;
                 case "SUIT_ONLY":
-                    for (Card card : this)
+                    for (PlayingCard card : this)
                         System.out.println(card.toString(false));
                     break;
             }

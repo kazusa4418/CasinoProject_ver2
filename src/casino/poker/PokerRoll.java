@@ -7,7 +7,7 @@ import java.util.Arrays;
 class PokerRoll {
     private Hand hand;
     private final int HAND_SIZE = 5;
-    private CardNumber[] numbers = new CardNumber[HAND_SIZE];
+    private int[] numStrength = new int[HAND_SIZE];
     private int[] overlap = new int[CardNumber.values().length - 1];
 
     private int score = 0;
@@ -15,7 +15,7 @@ class PokerRoll {
 
     PokerRoll(Hand hand) {
         this.hand = hand;
-        hand.sort(new CardSorter());
+        hand.sort();
         JOKER_NUMBER = jokerCount();
         setNumberArray();
         overlapCardCheck();
@@ -69,7 +69,7 @@ class PokerRoll {
 
     private int jokerCount() {
         int jokerNumber = 0;
-        for (Card card : hand)
+        for (PlayingCard card : hand)
             if (card.getNum() == CardNumber.JOKER)
                 jokerNumber++;
         return jokerNumber;
@@ -77,14 +77,14 @@ class PokerRoll {
 
     private void setNumberArray() {
         for (int i = 0; i < HAND_SIZE; i++)
-            numbers[i] = hand.get(i).getNum();
+            numStrength[i] = hand.get(i).getNum().strength();
     }
 
     //TODO: もっといい実装がありそうなので書き直す
     private void overlapCardCheck() {
         for (int i = 0; i < overlap.length; i++)
-            for (CardNumber num : numbers) {
-                if (num.strength() == (i + 1))
+            for (int num : numStrength) {
+                if (num == (i + 1))
                     overlap[i]++;
             }
     }
@@ -102,25 +102,9 @@ class PokerRoll {
         return true;
     }
 
-    //    private boolean judgeStraight() {
-//        int dif = 1;
-//        int usedJoker = 0;
-//        for (int i = 1; i < HAND_SIZE - JOKER_NUMBER; i++) {
-//            if (numbers[i].strength() - numbers[0].strength() != dif) {
-//                if (usedJoker < JOKER_NUMBER) {
-//                    usedJoker++;
-//                    i--;
-//                } else return false;
-//            }
-//            dif++;
-//        }
-//        setScore(5);
-//        return true;
-//    }
     private boolean judgeStraight() {
         int maxIndex = HAND_SIZE - JOKER_NUMBER - 1;
-        if (numbers[maxIndex].strength() - numbers[0].strength() < 5
-                && distinctCheck()) {
+        if (numStrength[maxIndex] - numStrength[0] < 5 && distinctCheck()) {
             setScore(5);
             return true;
         }
@@ -130,7 +114,7 @@ class PokerRoll {
     private boolean distinctCheck() {
         for (int i = 0; i < HAND_SIZE - JOKER_NUMBER; i++)
             for (int j = i + 1; j < HAND_SIZE - JOKER_NUMBER; j++)
-                if (numbers[i].strength() == numbers[j].strength())
+                if (numStrength[i] == numStrength[j])
                     return false;
         return true;
     }
@@ -148,7 +132,7 @@ class PokerRoll {
     private void judgeRoyalStraightFlush() {
         if (judgeStraightFlush()) {
             for (int i = 0; i < HAND_SIZE; i++)
-                if (numbers[0].strength() == 10)
+                if (numStrength[0] == 10)
                     setScore(10);
         }
     }

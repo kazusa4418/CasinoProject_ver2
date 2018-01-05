@@ -17,7 +17,7 @@ public class PokerManager {
     private ComPlayer com = ComPlayer.getInstance();
 
     public void runGame() {
-        System.out.println("DEBUG:ƒQ[ƒ€‚ğŠJn‚µ‚Ü‚µ‚½B");
+        System.out.println("DEBUG:ã‚²ãƒ¼ãƒ ã‚’é–‹å§‹ã—ã¾ã—ãŸã€‚");
         ConsoleManager.clear();
         distribute();
         pl.getHand().sort(new CardSorterOnPoker());
@@ -39,7 +39,7 @@ public class PokerManager {
 
     private void handChange() {
         while(true) {
-            Card card = cardSelect();
+            PlayingCard card = cardSelect();
             ConsoleManager.clear();
             if (card == null) break;
             pl.getHand().remove(card);
@@ -47,7 +47,7 @@ public class PokerManager {
         draw();
     }
 
-    private Card cardSelect() {
+    private PlayingCard cardSelect() {
         pl.showHand("WITH_INDEX");
         int no = input();
         if (no == -1) return null;
@@ -60,10 +60,10 @@ public class PokerManager {
             System.out.print("> ");
             String input = sc.nextLine();
             if (input.equals("")) return -1;
-            //TODO: ‚±‚Ì + 1 ‚ª‚Æ‚Ä‚à‹C‚ÉH‚í‚È‚¢A‘S‘Ì“I‚ÉƒRƒR‚Ìˆ—‚ª‹C‚É“ü‚ç‚È‚¢‚Ì‚Å‚Ç‚¤‚É‚©‚·‚é
+            //TODO: ã“ã® + 1 ãŒã¨ã¦ã‚‚æ°—ã«é£Ÿã‚ãªã„ã€å…¨ä½“çš„ã«ã‚³ã‚³ã®å‡¦ç†ãŒæ°—ã«å…¥ã‚‰ãªã„ã®ã§ã©ã†ã«ã‹ã™ã‚‹
             if (numberCheck(input, pl.getHand().size() + 1))
                 return Integer.parseInt(input);
-            System.out.println("“ü—Í‚ªŠÔˆá‚Á‚Ä‚¢‚Ü‚·B\nÄ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B");
+            System.out.println("å…¥åŠ›ãŒé–“é•ã£ã¦ã„ã¾ã™ã€‚\nå†å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚");
         }
     }
 
@@ -88,13 +88,13 @@ public class PokerManager {
 
     private void showRoll(PokerRoll roll, CharEntity chara) {
         if (chara instanceof Player) {
-            System.out.println("‚ ‚È‚½‚ÌèD: \n");
+            System.out.println("ã‚ãªãŸã®æ‰‹æœ­: \n");
             chara.showHand();
-            System.out.println("‚ ‚È‚½‚Ì–ğ: " + roll.toString());
+            System.out.println("ã‚ãªãŸã®å½¹: " + roll.toString());
         } else {
-            System.out.println("ºİËß­°À‚ÌèD: \n");
+            System.out.println("ï½ºï¾ï¾‹ï¾Ÿï½­ï½°ï¾€ã®æ‰‹æœ­: \n");
             chara.showHand();
-            System.out.println("ºİËß­°À‚Ì–ğ: " + roll.toString());
+            System.out.println("ï½ºï¾ï¾‹ï¾Ÿï½­ï½°ï¾€ã®å½¹: " + roll.toString());
         }
     }
 

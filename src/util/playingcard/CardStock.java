@@ -3,7 +3,7 @@ package util.playingcard;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class CardStock extends ArrayList<Card> {
+public class CardStock extends ArrayList<PlayingCard> {
     private final int JOKER_NUMBER;
 
     public CardStock() {
@@ -21,16 +21,16 @@ public class CardStock extends ArrayList<Card> {
         CardSuit[] suits = CardSuit.values();
         for (int i = 1; i < numbers.length; i++ ) {
             for (int j = 1; j < suits.length; j++ ) {
-                this.add(new Card(numbers[i], suits[j]));
+                this.add(new PlayingCard(numbers[i], suits[j]));
             }
         }
         for (int i = 0; i < jokerNum; i++) {
-            this.add(new Card(CardNumber.JOKER, CardSuit.JOKER));
+            this.add(new PlayingCard(CardNumber.JOKER, CardSuit.JOKER));
         }
     }
 
-    public Card takeCard() {
-        Card card = this.get(0);
+    public PlayingCard takeCard() {
+        PlayingCard card = this.get(0);
         this.remove(0);
         return card;
     }

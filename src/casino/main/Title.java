@@ -10,10 +10,10 @@ class Title implements Callback {
     private boolean flag = true;
 
     Title() {
-        menu.addMenu(1, "‚Í‚¶‚ß‚©‚çn‚ß‚é", this);
-        menu.addMenu(2, "‘±‚«‚©‚çn‚ß‚é", this);
-        menu.addMenu(3, "ƒZ[ƒuƒf[ƒ^‚ğíœ‚·‚é", this);
-        menu.addMenu(4, "ƒQ[ƒ€‚ğ‚â‚ß‚é", this);
+        menu.addMenu(1, "ã¯ã˜ã‚ã‹ã‚‰å§‹ã‚ã‚‹", this);
+        menu.addMenu(2, "ç¶šãã‹ã‚‰å§‹ã‚ã‚‹", this);
+        menu.addMenu(3, "ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤ã™ã‚‹", this);
+        menu.addMenu(4, "ã‚²ãƒ¼ãƒ ã‚’ã‚„ã‚ã‚‹", this);
     }
 
     void menu() {
@@ -49,13 +49,13 @@ class Title implements Callback {
         if (sfm.existSaveFile()) {
             sfm.readSaveData();
             flag = false;
-        } else System.out.println("ƒZ[ƒuƒf[ƒ^‚ª‘¶İ‚µ‚Ü‚¹‚ñB");
+        } else System.out.println("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ãŒå­˜åœ¨ã—ã¾ã›ã‚“ã€‚");
     }
 
     private void delete() {
         if (sfm.existSaveFile()) {
             sfm.deleteSaveData();
-        } else System.out.println("ƒZ[ƒuƒf[ƒ^‚ª‘¶İ‚µ‚Ü‚¹‚ñB");
+        } else System.out.println("ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ãŒå­˜åœ¨ã—ã¾ã›ã‚“ã€‚");
     }
 
     private void exit() {
