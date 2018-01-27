@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/casino/main/CharEntity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/ComPlayer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/PlayData.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/Player.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/casino/main/SaveFileManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/TestClass.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/casino/main/Title.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/main/package-info.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/casino/poker/PokerManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/casino/poker/RollNotFoundException.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/casino/poker/TestClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/Unused.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/manager/ConsoleManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/manager/FileManager.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/util/manager/NotRecordException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/manager/NullRecordException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/manager/StreamNotOpenException.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/util/manager/TestClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/manager/TimeManagementException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/util/manager/TimeManager.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/util/playingcard/CardSorterOnPoker.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/util/playingcard/PlayingCard.java" charset="UTF-8" />
-    <file url="PROJECT" charset="windows-31j" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

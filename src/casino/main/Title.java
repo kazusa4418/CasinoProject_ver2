@@ -17,6 +17,7 @@ class Title implements Callback {
     }
 
     void menu() {
+        flag = true;
         while(flag) {
             menu.show();
             menu.select();

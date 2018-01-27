@@ -29,11 +29,11 @@ public class Main implements Callback {
         while(true) {
             title.menu();
             this.menu();
-            System.out.println("またまた読まれているよ！");
         }
     }
 
     private void menu() {
+        flag = true;
         while(flag) {
             menu.show();
             menu.select();
